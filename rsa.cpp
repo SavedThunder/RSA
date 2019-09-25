@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <time.h>
 
 using namespace std;
 
@@ -30,19 +31,26 @@ bool isPrime(int num){
     return true;
 }
 
+unsigned long long int millerRabine(int num, int k){
+    srand (time(NULL));
+    int n = num - 1;
+    a = rand() % (n - 2) + 2;
+}
+
 int encryptRSA(string message, int pubkey, int privkeyW){
     int encrypted = 0;
     return encrypted;
 }
 
-string decrypt(int message, int pubkey, int privkey){
-    string message = "";
-    return message;
+string decryptRSA(int e_message, int pubkey, int privkey){
+    string d_message = "";
+    return d_message;
 }
 
 int main{
-    int pubkey = 0;
-    string message = "";
+    unsigned long long int pub_key = 0;
+    string user_message = "";
+    unsigned long long int e_message = 0;
     cout << "Please input a message" << endl;
     cin >> message;
     bool prime_flag = false;
